@@ -1,0 +1,14 @@
+# templates/tests/test.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-test
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: busybox-cont
+      image: busybox
+      command: ['telnet']
+      args: ['nginx-svc', '80']
+  restartPolicy: Never
