@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "spring-chart.fullname" . }}-pv
+  name: my-pvc
   labels:
     {{- include "spring-chart.labels" . | nindent 4 }}
 spec:
