@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "appserver-chart.fullname" . }}-test-connection"
+  labels:
+    {{- include "appserver-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+  {{- if .Values.namespaceBase.enabled }}
+  namespace: {{ .Values.namespaceBase.name }}
+  {{- end }}
+spec:
+  containers:
+    - name: wget
+      image: "{{ .Values.test.image }}:{{ .Values.test.imageTag | default "latest" }}"
+      command: ['wget']
+      args:
+        - '{{ include "appserver-chart.fullname" . }}-service:{{ .Values.service.port }}{{ .Values.readinessProbe.httpGet.path }}'
+  restartPolicy: Never
