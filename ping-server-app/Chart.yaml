@@ -1,0 +1,7 @@
+apiVersion: v2
+appVersion: 0.0.2
+description: A Helm chart for Kubernetes
+icon: https://appserver.com/test-icon
+name: ping-server-app
+type: application
+version: 0.0.2

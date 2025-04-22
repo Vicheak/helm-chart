@@ -168,3 +168,4 @@ progressDeadlineSeconds: 600
 test:
   image: mirror-registry.uat.acmobile.local:8443/devops/busybox
   imageTag: latest
+

@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  ping-server-app:
+  - apiVersion: v2
+    appVersion: 0.0.2
+    created: "2025-04-22T15:16:21.400724333+07:00"
+    description: A Helm chart for Kubernetes
+    digest: c6ed9010dce6207fbd3d8e7c0a83be0733fdb6ef1b32286634390dce73728087
+    icon: https://appserver.com/test-icon
+    name: ping-server-app
+    type: application
+    urls:
+    - ping-server-app-0.0.2.tgz
+    version: 0.0.2
+generated: "2025-04-22T15:16:21.399833328+07:00"
